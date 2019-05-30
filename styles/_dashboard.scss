@@ -1,0 +1,229 @@
+
+// header
+.settings {
+	padding-left: 58px !important;
+
+	h2 {
+		color: #151627;
+		font-size: 22px !important;
+	}
+}
+
+.hugeblock {
+	padding-top: 65px;
+}
+//white block
+
+.block {
+	border-radius: 6px;
+	background-color:  #ffffff;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+	height: 300px;
+	// width: 320px;
+	margin: 0 30px 60px 30px;
+
+// all circles with img	
+
+
+
+	.huge {
+		border: 2px solid #f7c8d2;
+		border-radius: 50%;
+		background-color: #f7c8d2;
+		text-align: center;
+		display: block;
+		width: 80px;
+		height: 80px;
+		margin-top: 80px;
+		line-height: 80px;
+
+		.dashicons {
+			position: relative;
+			right: 30px;
+			top: -35px;
+		}
+
+// number inside of circle		
+
+		span {
+			color: #ffffff;
+			font-size: 20px;
+			position: relative;
+			bottom: 80px;
+			z-index: 1;
+		}
+	}
+
+
+// circle 2
+	.huge2 {
+		background-color: #ab8fe4;
+		border: 2px solid #ab8fe4;
+
+		.dashicons {
+			position: relative;
+			right: 30px;
+			top: -35px;
+		}
+
+		span {
+			position: relative;
+			bottom: 81px;
+		}
+	}
+
+// circle 3	
+
+	.huge3 {
+		background-color: #54aef4;
+		border: 2px solid #54aef4;
+
+		.dashicons {
+			position: relative;
+			right: 50px;
+			top: -35px;
+		}
+
+		span {
+			position: relative;
+			bottom: 81px;
+		}
+	}
+
+// circle 4 	
+
+	.huge4 {
+		background-color: #30c886;
+		border: 2px solid #30c886;
+
+		.dashicons {
+			position: relative;
+			right: 50px;
+			top: -15px;
+		}
+
+		span {
+			position: relative;
+			bottom: 50px;
+		}
+	}
+
+// circle 5
+
+	.huge5 {
+		background-color: #f6b560;
+		border: 2px solid #f6b560;
+
+		.dashicons {
+			position: relative;
+			right: 52px;
+			top: -30px;
+		}
+
+		span {
+			position: relative;
+			bottom: 90px;
+		}
+	}
+
+// circle 6
+	.huge6 {
+		background-color: #29e5d1;
+		border: 2px solid #29e5d1;
+
+		.dashicons {
+			position: relative;
+			right: 45px;
+			top: -30px;
+		}
+
+		span {
+			position: relative;
+			bottom: 80px;
+		}
+	}
+
+// text under the circles	
+
+	.under-text {
+		margin-top: 60px;
+		color:  #63676d;
+		div {
+			font-size: 20px;
+			font-weight: 400;
+
+			a {
+				color:  #1717f2;
+			}
+		}
+	}
+}
+
+.bigblock {
+	&>a:hover {
+		svg{
+			color:darken(white,30%)
+		}
+		p{
+			color:darken(white,30%)
+		}
+	}
+}
+.add-campaign-square {
+	background-image: linear-gradient(to right,#9e2ad5, #3742ae);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		color:white;
+		width:6em;
+		height:6em;
+		transition: 0.5s color;
+	}
+	p {
+		color:white;
+		font-size:40px;
+		transition: 0.5s color;
+	}
+}
+
+
+// media 
+
+
+@media screen and (max-width: 750px){
+	.under-text2 {
+		margin-top: 40px !important;
+	}
+}
+
+@media screen and (max-width: 1319px){
+	.under-text {
+		margin-top: 50px !important;
+	}
+}
+
+@media screen and (max-width: 992px){
+	
+	.hugeblock {
+		margin-left: 0px !important;
+
+	}
+
+	h2 {
+		padding-left: 0px !important;
+	}
+}
+
+@media screen and (max-width: 800px){
+	
+	.hugeblock {
+		margin-left: 0px !important;
+		padding-top: 65px;
+	}
+
+	h2 {
+		padding-left: 0px !important;
+	}
+}
+

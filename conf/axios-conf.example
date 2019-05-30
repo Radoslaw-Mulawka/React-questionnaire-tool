@@ -1,0 +1,6 @@
+import axios from 'axios';
+
+axios.defaults.baseURL = "(tu wprowadzić adres API)";
+export let instance = '(tu wprowadzić adres instancji na z której przeprowadzane jest logowanie )';
+export let client_id = "(tu wprowadzić id)";
+export let client_secret = "(tu wprowadzić wygenerowany kod dla client_id)";

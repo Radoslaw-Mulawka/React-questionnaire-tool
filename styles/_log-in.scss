@@ -1,0 +1,573 @@
+@import 'variables';
+
+// main container for footer
+
+.main-to-footer-login {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 190px;
+
+  @media screen and (max-width: 768px){
+    padding-bottom: 140px;
+  }
+
+  //main login container
+
+  .main-container-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr;
+    grid-template-rows: auto 3fr;
+    grid-template-areas:
+            ". logo ."
+            ". . container";
+    margin: 10px 50px 0 50px;
+
+    @media screen and (max-width: 768px){
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+              ". logo ."
+              "container container container";
+      margin: 10px;
+    }
+
+    //logo
+
+    .logo-login {
+      grid-area: logo;
+      width: 80% !important;
+      justify-self: end;
+      align-self: end;
+    }
+
+    //container for form and img's
+
+    .second-container-login {
+      grid-area: container;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      height: 600px;
+
+      @media screen and (min-width: 769px) and (max-width: 1350px) {
+        grid-template-columns: 2fr 2fr;
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        margin: 30px 0 0 0;
+      }
+
+      //form container
+
+      .form-container-login {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+        height: 600px;
+
+        // send button
+
+        .send-log-in-button {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        @media screen and (max-width: 768px){
+          border-radius: 10px;
+        }
+
+        // form reset password
+
+        .form-reset-password {
+          margin: 120px 110px !important;
+
+          // alert reset password
+
+          .required-alert {
+            left: 910px !important;
+          }
+        }
+
+        // form forgotten password
+
+        .form-forgotten-password {
+          margin: 180px 110px !important;
+
+          .required-alert {
+            left: 920px !important;
+          }
+
+          @media screen and (min-width: 769px) and (max-width: 1350px) {
+            margin: 70px !important;
+          }
+
+          @media screen and (max-width: 768px){
+            margin: 100px 35px !important;
+          }
+
+          @media screen and (min-width: 1700px) {
+            margin: 40px 80px;
+          }
+
+          // text-input forgotten password
+
+          .text-input-forgotten-password {
+            width: 100% !important;
+          }
+        }
+
+        // form e-mail confirmation
+
+        .form-e-mail-confirmation {
+          margin: 110px 110px !important;
+
+          @media screen and (min-width: 769px) and (max-width: 1350px) {
+            margin: 70px !important;
+          }
+
+          @media screen and (max-width: 768px){
+            margin: 35px !important;
+          }
+
+          @media screen and (min-width: 1700px) {
+            margin: 160px 80px;
+          }
+
+          .required-alert {
+            left: 920px !important;
+          }
+
+          // header in e-mail confimation
+
+          .header-e-mail-confirmation {
+            line-height: 30px;
+            margin-bottom: 10px !important;
+          }
+
+          // description in e-mail confimation
+
+          .description-e-mail-confirmation {
+            margin-top: 20px;
+            line-height: 10px !important;
+          }
+        }
+
+        //form login
+
+        .form-login {
+          margin: 70px 80px;
+
+          @media screen and (min-width: 769px) and (max-width: 1350px) {
+            margin: 40px;
+          }
+
+          @media screen and (max-width: 768px){
+            margin: 20px;
+          }
+
+          @media screen and (min-width: 1700px) {
+            margin: 80px 80px;
+          }
+
+
+          //text input's
+
+          .text-input-login {
+            margin-bottom: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 98%;
+
+            @media screen and (max-width: 768px){
+              margin-top: 20px !important;
+              margin-bottom: 10px !important;
+              width: 97%;
+            }
+          }
+
+          textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+            border-color: #8686a7;
+            outline: 0 none;}
+
+          // first text input
+
+          .first {
+            margin-top: 40px;
+            margin-bottom: 20px;
+          }
+
+          // header of form
+
+          .header-div-login {
+            line-height: 30px;
+
+            .header-form-login {
+              font-size: 25px;
+              font-weight: 400;
+              margin: 0;
+              text-align: center;
+
+              @media screen and (max-width: 768px){
+                display: block;
+              }
+            }
+          }
+
+
+
+
+          //login button
+
+          .send-log-in-button {
+            background: -webkit-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+            background: -moz-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+            background: -o-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+            background: -ms-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+            background: linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+            border-radius: 20px;
+            padding: 8px 30px;
+            margin: 30px 0;
+            color: white;
+            border: none;
+            align-self: center;
+            z-index: 5;
+            position: relative;
+
+            @media screen and (max-width: 768px){
+              margin: 30px 0;
+            }
+
+            .link-in-button {
+              color: white;
+            }
+          }
+
+          // regulations
+
+          .regulations {
+            font-size: 12px;
+            color: #6a6b7f;
+
+            .regulations-red-star {
+              color: red;
+            }
+
+            .regulations-link {
+              font-weight: 900;
+              color: #464659;
+              z-index: 5;
+              position: relative;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          //links in form
+
+          .links-login {
+            display: block;
+            color:  #1199f8;
+            margin-bottom: 10px;
+            font-size: 16px;
+            z-index: 5;
+            position: relative;
+          }
+
+          .link-first {
+            margin-top: 30px;
+          }
+
+          .bold-login {
+            font-weight: 900;
+          }
+        }
+      }
+
+      // succes message container
+
+      .succes-message-container {
+        font-size: 25px !important;
+        margin: 160px 40px !important;
+        .send-log-in-button {
+          background: -webkit-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+          background: -moz-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+          background: -o-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+          background: -ms-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+          background: linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+          border-radius: 20px;
+          padding: 8px 30px;
+          margin: 30px 0;
+          color: white;
+          border: none;
+          align-self: center;
+          z-index: 5;
+          position: relative;
+          font-size: 13px !important;
+
+          @media screen and (max-width: 768px){
+            margin: 30px 0;
+          }
+
+          .link-in-button {
+            color: white;
+          }
+        }
+      }
+
+
+      //img's container
+
+      .img-container-login {
+        background-color: #151627;
+        border-bottom-right-radius: 13px;
+        border-top-right-radius: 10px;
+        position: relative;
+        height: 600px;
+
+        @media screen and (max-width: 768px){
+          display: none;
+        }
+
+        //one first cloud
+
+        .first-one-cloud {
+          position: absolute;
+          top: 20px;
+          left: -40px;
+
+          @media screen and (min-width: 769px) and (max-width: 850px) {
+            top: 40px;
+            width: 100px;
+          }
+
+          @media screen and (min-width: 850px) and (max-width: 985px) {
+            top: 70px;
+            width: 120px;
+
+          }
+
+        }
+
+        //two second clouds
+
+        .second-two-clouds-login {
+          position: absolute;
+          top: 80px;
+          right: 120px;
+
+          @media screen and (min-width: 1700px){
+            top: 150px;
+            right: 200px;
+          }
+
+          @media screen and (min-width: 769px) and (max-width: 850px) {
+            top: 180px;
+            right: 20px;
+            width: 170px;
+          }
+
+          @media screen and (min-width: 850px) and (max-width: 985px) {
+            top: 200px;
+            right: 20px;
+            width: 200px;
+
+          }
+
+          @media screen and (min-width: 985px) and (max-width: 1200px) {
+            right: 40px;
+          }
+        }
+
+        //flying balloon
+
+        .balloon-login {
+          position: absolute;
+          z-index: 3;
+
+          @media screen and (max-width: 768px){
+            display: none;
+          }
+        }
+
+        //town
+
+        .town {
+          grid-area: town;
+          justify-self: right;
+          position: absolute;
+          bottom: -18px;
+          width: 750px;
+          right: 0;
+          z-index: 4;
+
+          @media screen and (max-width: 768px){
+            display: none;
+          }
+
+          @media screen and (min-width: 769px) and (max-width: 850px) {
+            right: 0;
+            bottom: -10px;
+            width: 400px;
+          }
+
+          @media screen and (min-width: 850px) and (max-width: 985px) {
+            right: 0;
+            bottom: -13px;
+            width: 500px;
+          }
+
+          @media screen and (min-width: 985px) and (max-width: 1200px) {
+            right: 0;
+            bottom: -14px;
+            width: 550px;
+          }
+
+          @media screen and (min-width: 1200px) and (max-width: 1520px) {
+            right: 0;
+            bottom: -16px;
+            width: 650px;
+          }
+
+          @media screen and (min-width: 1600px) {
+            right: 0;
+            bottom: -20px;
+            width: 750px;
+          }
+        }
+      }
+    }
+
+    .required-alert {
+      position: absolute;
+      left: 940px;
+      padding: 7px 40px 8px 9px;
+      z-index: 100;
+      max-width: 700px;
+      background-color: white;
+      border: 1px solid #ff426a;
+      color: #ff426a;
+      border-radius: 5px;
+
+      #triangle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-bottom: 1px solid #ff426a;
+        border-left: 1px solid #ff426a;
+        top: 50%;
+        left: -5px;
+        transform: translate(0%, -50%) rotate(45deg);
+      }
+      .cross {
+        position: absolute;
+        width: 35px;
+        right: 0;
+        background-color: #ff426a;
+        top: 0;
+        bottom: 0;
+        & > div {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          & > span:first-child {
+            display: inline-block;
+            position: absolute;
+            // top:50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+
+          }
+          & > span:nth-child(2) {
+            display: inline-block;
+            position: absolute;
+            // top:50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(-45deg);
+
+          }
+        }
+      }
+    }
+
+  }
+
+  // regulations container
+
+  .regulations-container {
+    display: none;
+  }
+
+  .regulations-show {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .close-regulations-button {
+      margin: 15px;
+      padding: 7px 25px;
+      background: -webkit-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -moz-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -o-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -ms-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      border-radius: 18px;
+      border-style: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    embed {
+      @media screen and (max-width: 768px){
+        width: 95%;
+      }
+    }
+  }
+
+  //footer
+
+  footer {
+    color: #717281;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+
+    .footer-logo {
+      margin-left: 10px;
+      display: inline;
+
+      @media screen and (max-width: 768px){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+

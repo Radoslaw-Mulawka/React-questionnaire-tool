@@ -1,0 +1,483 @@
+@import 'variables';
+
+.main-to-footer-sign {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 190px;
+
+  @media screen and (max-width: 768px){
+    padding-bottom: 100px;
+  }
+
+  //main sign container
+
+  .main-container-sign {
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr;
+    grid-template-rows: auto 3fr;
+    grid-template-areas:
+            ". logo ."
+            ". . container";
+    margin: 10px 50px 0 50px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+              ". logo ."
+              "container container container";
+      margin: 10px;
+    }
+
+    //logo
+
+    .logo-sign {
+      grid-area: logo;
+      width: 80% !important;
+      justify-self: end;
+      align-self: end;
+    }
+
+    //container for form and img's
+
+    .second-container-sign {
+      grid-area: container;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      height: 600px;
+
+      @media screen and (min-width: 769px) and (max-width: 1350px) {
+        grid-template-columns: 2fr 2fr;
+      }
+
+      @media screen and (max-width: 979px){
+        grid-template-columns: 1fr;
+        margin: 30px 0 0 0;
+
+      }
+
+
+      //form container
+
+      .form-container-sign {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+        height: 600px;
+
+        .succes-message-container {
+          margin: 100px 60px;
+          .succes-message {
+            font-size: 30px;
+          }
+        }
+
+        @media screen and (max-width: 979px){
+          border-radius: 10px;
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+          min-height: 480px;
+        }
+
+        //form
+
+        .form-sign {
+          margin: 30px 80px;
+
+          @media screen and (min-width: 769px) and (max-width: 1350px) {
+            margin: 40px;
+          }
+
+          @media screen and (max-width: 979px){
+            margin: 20px;
+          }
+
+          @media screen and (min-width: 1700px) {
+            margin: 40px 80px;
+          }
+
+          //text input's
+
+          .text-input-sign {
+            margin-bottom: 20px !important;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 95%;
+            margin-bottom: 8px;
+
+            @media screen and (max-width: 979px){
+              margin-top: 20px !important;
+              margin-bottom: 10px !important;
+              width: 97%;
+            }
+          }
+
+          textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+            border-color: #8686a7;
+            outline: 0 none;}
+
+          //first text input
+
+          .first {
+            margin-top: 40px;
+          }
+
+          //header of form
+
+          .header-div-sign {
+            line-height: 30px;
+
+            .header-form-sign {
+              font-size: 25px;
+              font-weight: 400;
+              margin: 0;
+
+              @media screen and (max-width: 768px){
+                text-align: center;
+                display: block;
+              }
+            }
+
+          }
+
+
+          // checkboxes
+
+          .checkboxes-container {
+            margin-top: 20px;
+            width: 100%;
+
+            .check-p {
+              position: relative;
+              bottom: 7px;
+              color: #6a6b7f;
+              font-weight: 400;
+              display: inline !important;
+            }
+
+
+            input[type="checkbox"]:not(:checked),
+            input[type="checkbox"]:checked {
+              position: relative;
+              top: 0;
+              left: 0;
+              visibility: hidden;
+            }
+            input[type="checkbox"]:not(:checked) + label,
+            input[type="checkbox"]:checked + label {
+              position: relative;
+              top: 5px;
+              padding-left: 40px;
+              cursor: pointer;
+            }
+
+            /* checkbox aspect */
+            input[type="checkbox"]:not(:checked) + label:before,
+            input[type="checkbox"]:checked + label:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: -5px;
+              width: 20px;
+              height: 20px;
+              border: 0.5px solid #8686a7;
+              background: #fff;
+              border-radius: 6px;
+              box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+            }
+            /* checked mark aspect */
+            input[type="checkbox"]:not(:checked) + label:after,
+            input[type="checkbox"]:checked + label:after {
+              content: '\2714';
+              position: absolute;
+              left: 4px;
+              top: 0;
+              font-size: 15px;
+              line-height: 0.8;
+              color: #000000;
+              transition: all .2s;
+              font-family: Helvetica, Arial, sans-serif;
+            }
+            /* checked mark aspect changes */
+            input[type="checkbox"]:not(:checked) + label:after {
+              opacity: 0;
+              transform: scale(0);
+            }
+            input[type="checkbox"]:checked + label:after {
+              opacity: 1;
+              transform: scale(1);
+            }
+            /* disabled checkbox */
+            input[type="checkbox"]:disabled:not(:checked) + label:before,
+            input[type="checkbox"]:disabled:checked + label:before {
+              box-shadow: none;
+              border-color: #bbb;
+              background-color: #ddd;
+            }
+            input[type="checkbox"]:disabled:checked + label:after {
+              color: #999;
+            }
+            input[type="checkbox"]:disabled + label {
+              color: #aaa;
+            }
+
+            // regulations
+
+            .regulations-link {
+              font-weight: 900;
+              color: #464659;
+              z-index: 10;
+              position: relative;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .required-alert {
+            position: absolute;
+            left: 930px;
+            padding: 7px 40px 8px 9px;
+            z-index: 100;
+            max-width: 700px;
+            background-color: white;
+            border: 1px solid #ff426a;
+            color: #ff426a;
+            border-radius: 5px;
+
+            #triangle {
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              background-color: white;
+              border-bottom: 1px solid #ff426a;
+              border-left: 1px solid #ff426a;
+              top: 50%;
+              left: -5px;
+              transform: translate(0%, -50%) rotate(45deg);
+            }
+            .cross {
+              position: absolute;
+              width: 35px;
+              right: 0;
+              background-color: #ff426a;
+              top: 0;
+              bottom: 0;
+              & > div {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                & > span:first-child {
+                  display: inline-block;
+                  position: absolute;
+                  // top:50%;
+                  left: 50%;
+                  width: 2px;
+                  height: 20px;
+                  background-color: white;
+                  transform: rotate(45deg);
+
+                }
+                & > span:nth-child(2) {
+                  display: inline-block;
+                  position: absolute;
+                  // top:50%;
+                  left: 50%;
+                  width: 2px;
+                  height: 20px;
+                  background-color: white;
+                  transform: rotate(-45deg);
+
+                }
+              }
+            }
+          }
+
+
+          //captcha
+
+          .captcha-container {
+            margin: 40px 0;
+            .g-recaptcha {
+              display: inline-block;
+            }
+          }
+
+          .bold-sign {
+            font-weight: 900;
+          }
+
+
+        }
+      }
+
+      //sign button
+
+      .send-sign-button {
+        background: -webkit-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+        background: -moz-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+        background: -o-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+        background: -ms-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+        background: linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+        border-radius: 20px;
+        padding: 8px 30px;
+        margin: 0 0 20px 0;
+        color: white;
+        border: none;
+        align-self: center;
+        outline: none !important;
+
+        @media screen and (max-width: 768px){
+          margin: 30px 0;
+        }
+      }
+
+
+      //img container
+
+      .img-container-sign {
+        background-color: #151627;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 10px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+        position: relative;
+        height: 600px;
+
+        @media screen and (max-width: 979px){
+          display: none;
+        }
+
+        //one first cloud
+
+        .first-one-cloud {
+          position: absolute;
+          left: -40px;
+          top: 20px;
+        }
+
+        //second two cloud's
+
+        .second-two-clouds-sign {
+          position: absolute;
+          top: 100px;
+          left: 150px;
+
+          @media screen and (min-width: 979px) and (max-width: 1400px){
+            top: 150px;
+            left: 80px;
+          }
+        }
+
+        //flying balloon
+
+        .balloon-sign {
+          position: absolute;
+          top: 250px;
+          right: 100px;
+          z-index: 1;
+
+          @media screen and (max-width: 979px){
+            display: none;
+          }
+        }
+
+        //bottom clouds
+
+        .bottom-clouds-sign {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: 4;
+
+          border-bottom-right-radius: 10px;
+
+          @media screen and (max-width: 768px){
+            display: none;
+          }
+
+          @media screen and (min-width: 1800px){
+            width: 700px;
+          }
+
+          @media screen and (min-width: 769px) and (max-width: 1070px) {
+            width: 400px;
+          }
+
+        }
+      }
+    }
+  }
+
+  // regulations container
+
+  .regulations-container {
+    display: none;
+  }
+
+  .regulations-show {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    //width: 100%;
+    //height: 100%;
+    //left: 0;
+    //top: 0;
+    //padding-bottom: 15px;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .close-regulations-button {
+      margin: 15px;
+      padding: 7px 25px;
+      background: -webkit-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -moz-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -o-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: -ms-linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      background: linear-gradient(-90deg, rgba(84, 35, 107, 0.65) 0%, rgb(77, 4, 152) 99%);
+      border-radius: 18px;
+      border-style: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    embed {
+      @media screen and (max-width: 768px){
+        width: 95%;
+      }
+    }
+  }
+
+
+  //footer
+
+  footer {
+    color: #717281;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    bottom: 0px;
+    margin-bottom: 10px;
+
+    .footer-logo {
+      margin-left: 10px;
+      display: inline;
+      width: 30px;
+
+      @media screen and (max-width: 768px){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+

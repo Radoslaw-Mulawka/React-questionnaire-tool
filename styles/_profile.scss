@@ -1,0 +1,574 @@
+@import 'variables';
+
+//main container
+
+.grid-container-profile {
+  padding: 0 50px;
+  padding-top: 65px;
+  margin-top: 20px;
+  display: grid;
+  //height: 65vh;
+  grid-template-columns: 1.8fr 1.2fr;
+  grid-column-gap: 30px;
+  grid-template-rows: 0.4fr 1fr auto;
+  grid-template-areas:
+  "settings data"
+  "settings delete-button"
+  "log-out-button log-out-button";
+
+  //@media screen and (min-width: 1600px){
+  //  grid-template-rows: 1fr 2fr auto;
+  //}
+
+  @media screen and (max-width: 1000px){
+    grid-template-areas:
+     "settings settings"
+     "settings settings"
+     "data data"
+     "delete-button log-out-button";
+    grid-row-gap: 20px;
+  }
+
+  @media screen and (max-width: 360px){
+    grid-template-areas:
+            "settings settings"
+            "settings settings"
+            "data data"
+            "delete-button delete-button"
+            "log-out-button log-out-button";
+    grid-row-gap: 20px;
+    padding: 0 10px;
+    padding-top: 65px;
+  }
+
+
+//settings container
+
+  .user-settings-profile {
+    grid-area: settings;
+    background-color: white;
+    grid-row: 1/3;
+    padding: 20px 10px 40px 20px;
+    display: grid;
+    grid-template-columns: 0.6fr 2fr;
+    grid-template-rows: 0.5fr 2fr 2fr;
+    grid-template-areas:
+     "header header"
+     "img form"
+     ". form";
+    background-color:  #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
+
+
+    @media screen and (max-width: 768px){
+      padding: 20px 20px 40px 20px;
+      grid-template-areas:
+       "header header"
+       "img img"
+       "form form";
+    }
+
+    @media screen and (max-width: 360px){
+      grid-template-rows: 0.5fr auto 2fr;
+    }
+
+    //settings header
+
+    .settings-header-profile {
+      grid-area: header;
+      font-size: 16px;
+
+      @media screen and (max-width: 768px){
+        margin-left: 0;
+      }
+
+      //@media screen and (min-width: 768px){
+      //  text-align: center;
+      //}
+
+      @media screen and (max-width: 360px){
+        text-align: center;
+      }
+    }
+
+    //img and edit
+
+    .user-img-container-profile {
+      grid-area: img;
+      padding: 5px 5px;
+      @media screen and (max-width:360px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        width: 110px;
+      }
+
+      .edit-avatar-profile {
+        margin-top: 10px;
+        color: $btn-bg-color;
+        margin-left: 40px;
+        @media screen and (max-width:360px){
+          margin-left:0;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  //form
+
+  .user-form-profile {
+    grid-area: form;
+    //align-self: end;
+    padding: 15px 5px;
+    //height: 100%;
+
+    //must fill red stars
+
+    .change-name-header {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .name-span {
+      width: 50%;
+      margin-right: 10px;
+
+      @media screen and (max-width: 1000px){
+        width: 28% !important;
+      }
+
+      @media screen and (max-width: 376px){
+        width: 35% !important;
+      }
+    }
+
+    .icon-profile {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .red-star-profile {
+      color: red;
+    }
+
+    .edit-icon {
+      margin-bottom: 5px;
+    }
+
+    .save-icon {
+      display: none;
+    }
+
+    input {
+      width: 70%;
+      margin-right: 50px;
+      padding: 5px;
+      border: 0.5px solid #dbdbdd;
+      border-radius: 4px;
+
+      @media screen and(max-width: 768px){
+        width: 74%;
+        margin-right: 25px;
+      }
+
+      @media screen and(max-width: 478px){
+        width: 85%;
+        margin-right: 7px;
+      }
+    }
+
+    .first-profile {
+      margin-top: 0;
+    }
+
+    .hidden-input {
+      display: none;
+    }
+
+    label {
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    #old-password {
+      position: relative;
+    }
+
+    .required-alert {
+      position: absolute;
+      left: 720px;
+      display: none;
+      //padding: 18px;
+      //padding-right: 50px;
+      //height: 90px;
+      //width: 286px;
+      //right: -200px;
+      //top: -110px;
+      padding: 7px 40px 8px 9px;
+      z-index: 1;
+      background-color: white;
+      border: 1px solid #ff426a;
+      color: #ff426a;
+      border-radius: 5px;
+
+      @media screen and (min-width: 1550px){
+        left: 850px;
+      }
+
+      @media screen and (max-width: 1500px){
+        left: 660px;
+      }
+      @media screen and (max-width: 1400px){
+        left: 610px;
+      }
+      @media screen and (max-width: 1300px){
+        left: 580px;
+      }
+      @media screen and (max-width: 1200px){
+        left: 550px;
+      }
+      @media screen and (max-width: 1140px){
+        left: 480px;
+      }
+      @media screen and (max-width: 1040px){
+        left: 440px;
+      }
+      @media screen and (max-width: 1000px){
+        left: 680px;
+      }
+      @media screen and (max-width: 965px){
+        left: 660px;
+      }
+      @media screen and (max-width: 900px){
+        left: 600px;
+      }
+      @media screen and (max-width: 768px){
+        left: 400px;
+        margin-right: 15px;
+      }
+
+      #triangle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-bottom: 1px solid #ff426a;
+        border-left: 1px solid #ff426a;
+        top: 50%;
+        left: -5px;
+        transform: translate(0%, -50%) rotate(45deg);
+      }
+      .cross {
+        position: absolute;
+        width: 35px;
+        right: 0;
+        background-color: #ff426a;
+        top: 0;
+        bottom: 0;
+        & > div {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          & > span:first-child {
+            display: inline-block;
+            position: absolute;
+            // top:50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+
+          }
+          & > span:nth-child(2) {
+            display: inline-block;
+            position: absolute;
+            // top:50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(-45deg);
+
+          }
+        }
+      }
+    }
+
+    .bold-profile {
+      font-weight: 900;
+      margin: 25px 0;
+    }
+
+    .error-password {
+      width: 70%;
+      padding: 5px 0 5px 5px;
+      text-align: center;
+      margin-top: 20px;
+      color: #ff464d;
+      background-color: white;
+      border: 1px solid #ff426a;
+      color: #ff426a;
+      border-radius: 5px;
+    }
+  }
+
+  // change password
+
+  //.change-password-container {
+  //  display: none;
+  //}
+
+  //confirm button
+
+  .confirm-button-profile {
+    display: inline !important;
+    margin-right: 30px;
+    grid-area: button;
+    justify-self: start;
+    -ms-flex-item-align: end;
+    align-self: end;
+    background-color: #1717f2;
+    padding: 12px 39px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: $btn-bg-color-hover;
+    }
+
+    @media screen and (max-width: 370px){
+      margin-left: 10px;
+    }
+  }
+
+  //error for password
+
+  .error-password {
+    display: none;
+  }
+
+  .buttons-in-form {
+    margin-top: 15px !important;
+  }
+
+
+  //change-buttons
+
+  .change-button-profile {
+    grid-area: button;
+    justify-self: start;
+    -ms-flex-item-align: end;
+    align-self: end;
+    background-color: #1717f2;
+    padding: 12px 39px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: $btn-bg-color-hover;
+    }
+
+    @media screen and (max-width: 952px){
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 370px){
+      //margin-left: 20px;
+    }
+  }
+
+  .button-div {
+    @media screen and (min-width: 370px){
+      display: inline !important;
+    }
+  }
+
+  //cancel-button
+
+  .cancel-button-profile {
+    @media screen and (max-width: 370px){
+      margin-left: -16px;
+    }
+  }
+
+  //data container
+
+  .user-data-profile {
+    grid-area: data;
+    background-color: white;
+    background-color:  #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
+    padding: 20px 10px 40px 30px;
+
+
+    @media screen and (max-width: 768px) {
+      padding: 20px 20px 40px 20px;
+    }
+
+    .data-header-profile {
+      font-size: 16px;
+    }
+
+    .e-mail-profile {
+      color: $btn-bg-color;
+    }
+
+    .data-profile {
+      font-weight: 700;
+    }
+
+    .data-info-profile {
+      width: 30%;
+      display: inline-block;
+
+      @media screen and (max-width: 650px){
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  // delete profile
+
+  .confirm-if-want-delete-profile {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .container-confirm-if-delete {
+      margin-top: 200px;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+      border-radius: 6px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+      height: 30%;
+      background-color: white;
+      padding: 40px 20px 15px 20px;
+
+      @media screen and (min-width: 1600px){
+        height: 20%;
+      }
+
+      @media screen and (max-width: 1250px){
+        padding: 60px 30px 25px 30px;
+        height: 40%;
+      }
+
+      @media screen and (max-width: 555px){
+        padding: 60px 30px 25px 30px;
+        height: 45%;
+        width: 85%;
+      }
+
+      @media screen and (max-width: 380px){
+        padding: 60px 30px 25px 30px;
+        height: 55%;
+        width: 85%;
+      }
+
+      .confirm-if-delete-info {
+        margin-bottom: 35px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .delete-confirm-buttons-div {
+        display: inline-block;
+        margin: 10px;
+
+        .confirm-delete-button {
+          background-color: #1717f2;
+          padding: 12px 39px;
+          border: none;
+          border-radius: 20px;
+          color: white;
+
+          &:hover {
+            background-color: $btn-bg-color-hover;
+          }
+        }
+
+        .cancel-delete-button {
+          background-color: $delet-btn-col;
+          padding: 12px 39px;
+          border: none;
+          border-radius: 20px;
+          color: white;
+
+          &:hover {
+            background-color: $delet-btn-col-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .delete-button-profile {
+    grid-area: delete-button;
+    justify-self: end;
+    align-self: start;
+    margin-top: 50px;
+    background-color: $delet-btn-col;
+    padding: 12px 39px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+
+    &:hover {
+      background-color: $delet-btn-col-hover;
+    }
+
+    @media screen and (max-width: 1000px){
+      margin-top: 0 !important;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 360px){
+      margin-top: 0;
+    }
+  }
+
+  .log-out-button-profile {
+    grid-area: log-out-button;
+    justify-self: end;
+    background-color: #1717f2;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 125px;
+    height: 42px;
+
+    &:hover {
+      background-color: $btn-bg-color-hover;
+    }
+
+    @media screen and (max-width: 360px){
+      margin-top: 0;
+    }
+  }
+}

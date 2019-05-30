@@ -1,0 +1,250 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700|Oswald:700&subset=latin-ext');
+
+
+@import 'basic-data';
+@import 'question-list';
+@import "question-form";
+@import 'places-list';
+@import 'navigation-and-top-block';
+@import 'variables';
+@import 'dashboard';
+@import 'campaign-creation';
+@import 'profile';
+@import 'log-in';
+@import 'sign-in';
+@import 'answers-details';
+
+.row-flex-nav-wrap {
+    display:flex;
+}
+
+
+
+input::placeholder, textarea::placeholder {
+    color:#a7a8bc !important;
+}
+
+button {
+    outline:none !important;
+}
+
+
+
+body {
+    background-color:#e4e9ef;
+    font-family: Muli,sans-serif;
+    position:relative;
+    // min-width:320px;
+}
+
+// NEW-CAMPAIGN.html styles 
+main{
+    .places-preloader {
+        border: 3px solid #f3f3f3; /* Light grey */
+        border-top: 3px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .table-wrap {
+        padding-left:50px;
+        padding-right:50px;
+        td {
+            padding-bottom: 20px;
+            padding-top: 20px;
+            &[data-th="Kampanie"]{
+                text-align:center;
+                padding-left:0 !important;
+                @media screen and(max-width:850px){
+                    text-align:left;
+                    padding-left:20px !important;
+                }
+            }
+            &[data-th="Ilość wyświetleń"], &[data-th="Ilość odpowiedzi"], &[data-th="Akcje"]{
+                padding-left:0 !important;
+                @media screen and(max-width:850px){
+                    padding-left:20px !important;
+                }
+            }
+        }
+
+        .name {
+            width: 50%;
+        }
+
+        .status {
+            width: 15%;
+            text-align:left !important;
+        }
+
+        .data {
+            width: 15%;
+        }
+
+        .action {
+            width: 20%;
+        }
+
+        a{
+            text-decoration: none;
+            color: $btn-bg-color;
+            display:inline-block;
+
+            &:hover {
+                text-decoration: underline ;
+            }
+        }
+        form {
+            display: inline-block; 
+            margin-left:20px;
+            @media screen and (max-width:450px){
+                &{
+                    margin-left:0;
+                }
+            }
+            button {
+                background-color:white;
+                border:none;
+                color:$delet-btn-col;
+                position: relative !important;
+                // right: 16px;
+                padding:0;
+                text-align: left;
+                &:hover {
+                    text-decoration: underline ;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.profile-footer {
+    display:flex;
+    justify-content:flex-end;
+    padding:0 15px;
+    margin-bottom:30px;
+    .button-link {
+        width: 200px;
+        height: 50px;
+        background-color: #1717f2;
+        border-radius: 30px;
+        color: #dedede;
+        border: none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+}
+
+@media screen and (max-width: 1630px){
+    td {
+        .allform {
+            display: block;
+        }
+
+        .allto {
+            display: block;
+        }
+        .btn {
+            display: block;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 1099px){
+    .name {
+        width: 45% !important;
+    }
+
+    .status {
+        width: 15%;
+    }
+
+    .data {
+        width: 20% !important;
+    }
+
+    .action {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    span.from {
+        margin-left:0;
+    }
+    span.to {
+        margin-left: 10px;
+    }
+    .content-column main .table-wrap table tbody tr td[data-th="Data wyświetlania"] {
+        div {
+            display:none;
+        }
+    }
+    .table-wrap thead{
+        display:none;
+        th {
+            display: none;
+        }
+    }
+    
+    div.table-wrap td {
+        display: block;
+        &:first-child{
+            margin-top:15px;
+        }
+        &:last-child{
+            margin-bottom:15px;
+        }
+    }
+    div.table-wrap td:before {
+        content: attr(data-th) " : ";
+        display: inline-block;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    div.table-wrap td[data-th="Data wyświetlania"]:before {
+        @media screen and (max-width:360px){
+            display: block;
+        }   
+    }
+    .table-user-information {
+        td:before {
+            content:"" !important;
+        }
+    }
+    td {
+        padding-bottom: 5px !important;
+        padding-top: 5px !important;
+        
+        .allform {
+            display: inline;
+        }
+
+        .allto {
+            display: inline;
+        }
+        .btn {
+            display: inline;
+        }
+
+        button {
+            position: relative !important;
+            right: 0px !important;
+        }
+    }
+}
+
+
+// * {
+//     border:1px solid red;
+// }

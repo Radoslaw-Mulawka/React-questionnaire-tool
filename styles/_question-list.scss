@@ -1,0 +1,352 @@
+@import 'variables';
+
+
+// LISTA PYTAŃ
+            .question-list {
+                background-color:#ffffff;
+                padding:20px 30px;
+                margin:0 50px;
+                border-radius:6px;
+                margin-bottom:50px;
+                @media screen and (max-width: 700px){
+                    & {
+                        thead{
+                            display:none;
+                            th {
+                                display: none;
+                            }
+                        }
+                        tbody {
+                            tr{
+                                border-bottom: 1px solid #e4e9ef;
+                                &:last-child {
+                                    border-bottom:none;
+                                }
+                                td{
+                                    padding:5px 10px !important;
+                                    form{
+                                        display:inline;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                td:nth-child(3) span {
+                                    display:inline !important;
+                                }
+                            }
+                        }
+                        td {
+                            display: block;
+                            &:first-child{
+                                margin-top:15px;
+                            }
+                            &:last-child{
+                                margin-bottom:15px;
+                            }
+                        }
+                        td:before {
+                            content: attr(data-th) " : ";
+                            display: inline-block;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                        td.form-span:before {
+                            content: attr(data-th) " ";
+                            display: inline-block;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                        td[colspan="4"]:before {
+                            content: attr(data-th) " ";
+                            display: inline-block;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                @media screen and (max-width:450px){
+                    & {
+                        margin:0 20px 30px;
+                    }
+                }
+                
+                .form-data-flex{
+                    display:flex;
+                    justify-content:space-between;
+                    // margin-bottom:50px;
+                    font-weight:700;
+                    font-size:2em;
+                    color: $form-names;
+                    @media screen and (max-width:450px){
+                        &{
+                            font-size:20px;
+                        }
+                    }
+                    span {
+                        cursor:pointer;
+                    }
+                }
+                table {
+                    margin-top:50px;
+                    width:100%;
+                    color:$table-row-color;
+                    margin-bottom:40px;
+                    thead{
+                        tr{
+                            border-bottom:1px solid #e4e9ef;
+                            height:60px;
+                            th{
+                                text-align: left;
+                                padding:0 10px;
+                                &.text-center {
+                                    text-align: center;
+                                }                                
+                                &:nth-child(2){
+                                    width:60%;
+                                }
+                                &:nth-child(4){
+                                    min-width:90px;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            border-bottom:1px solid #e4e9ef;
+                            td[colspan="4"]{
+                                    background-color:#f2f8ff;
+                                    select[placeholder="question-type"]{
+                                        width:82%;
+                                    }
+                            }
+                            &:nth-child(3) {
+                                border-bottom:none;
+                            }
+
+                            textarea{
+                                resize: none;
+                                border-radius:5px;
+                                border:1px solid #dbdbdd;
+                                height:80px;
+                                resize: none;
+                                font-size:20px;
+                                font-size:0.9em;
+                                color:$form-names;
+                                width: 82%;
+                                overflow: hidden;
+                            }
+                            td{
+                                padding: 20px 10px;
+                                text-align: left;
+                                &.text-center {
+                                    text-align: center;
+                                    @media screen and (max-width:700px) {
+                                        text-align: left;
+                                    }
+                                }
+                                &:first-child{
+                                    font-weight:700;
+                                }
+                                &:nth-child(2) {
+                                    text-align:left;
+                                    // padding-left:50px;
+                                }
+                                &:nth-child(3) {
+                                    span {
+                                        width: 70%;
+                                        min-width: 180px;
+                                        display: block;
+                                        text-align: left;
+                                        // margin: 0 auto;
+                                    }
+                                }
+                                &:last-child {
+                                    min-width:120px;
+                                }
+                                
+                                a.btn {
+                                    padding:5px;
+                                    color:$btn-bg-color;
+                                    text-align: center !important;
+                                }
+                                button.edit-btn, button.delete-btn{
+                                    background-color:white;
+                                    border:none;
+                                    padding: 0;
+                                }
+                                button.edit-btn {
+                                    color:$btn-bg-color;
+                                }
+                                button.delete-btn {
+                                    color:$delet-btn-col;
+                                }
+
+                            }
+                        }
+                        .form-span {
+                            vertical-align: top !important;
+                        }
+                        form {
+                            tr{
+                                border-bottom:none !important;
+                            }
+                            select {
+                                width:82%;
+                                border-radius:5px;
+                                border:1px solid #dbdbdd;
+                                color:#a7a8bc;
+                            }
+                            .save {
+                                display:flex;
+                                align-items:center;
+                                justify-content:flex-end;
+                                button {
+                                    // margin-bottom:50px;
+                                    width:200px;
+                                    height:50px;
+                                    background-color:#6161f5;
+                                    border-radius:30px;
+                                    color: $btn-txt-color;
+                                    border:none;
+                                }
+                            }
+                        }
+                        .table-cell-flex-wrap {
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            margin-bottom: 40px;
+                            .if-required {
+                                display:flex;
+                                justify-content:flex-start;
+                                width:82%;
+                                div {
+                                    display:flex;
+                                    align-items:center;
+                                    margin-right:20px;
+                                }
+
+                                input[type="radio"] {
+                                    width:30px;
+                                    height:30px;
+                                    margin:0;
+                                    margin-right:7px;
+                                }
+                            }
+                            &:last-child{
+                                margin-bottom:0px;
+                            }
+                            textarea{
+                                padding:5px 10px;
+                            }
+                            p{
+                                margin:0;
+                                margin-right:5px;
+                                width:15%;
+                                align-self:flex-start;
+                            }
+                            .last-textarea {
+                                display:flex;
+                                justify-content:flex-end;
+                                width:82%;
+                                input[type="checkbox"] {
+                                    width:30px;
+                                    height:30px;
+                                    margin:0;
+                                    margin-right:10px;
+                                }
+                                textarea {
+                                    width:100%;
+                                    padding:6px 12px;
+                                }
+                            }
+                            .last-textarea-row-breaker {
+                                border-bottom:none;
+                            }
+
+                        }
+                        .radio-text-flex-wrap{
+                                display:flex;
+                                flex-direction:column;
+                                align-items:flex-end;
+                                margin-bottom:40px;
+                                .radio-text-wrap{
+                                    // position: relative;
+                                    width:82%;
+                                    margin-bottom:40px;
+                                    display:flex;
+                                    justify-content:flex-end;
+                                    align-items:center;
+                                    // .error {
+                                    //     position: absolute;
+                                    //     top:35px;
+                                    //     left: 40px;
+                                    // }
+                                    &:last-child{
+                                        margin-bottom:0;
+                                    }
+                                    input[type="text"]{
+                                        display:inline-block !important;
+                                        margin-right:10px;
+                                        font-size:0.9em;
+                                    }
+                                    input[type="radio"] {
+                                        margin:0;
+                                        margin-right:10px;
+                                        min-width:30px;
+                                        min-height:30px;
+                                    }
+                                    input[type="checkbox"] {
+                                        margin:0;
+                                        margin-right:10px;
+                                        min-width:30px;
+                                        min-height:30px;
+                                    }
+
+                                    .delete-answer {
+                                        background-color:transparent;
+                                        color:$btn-bg-color;
+                                        font-size:1em;
+                                        border:none;
+                                        display:flex;
+                                        align-items:center;
+                                        min-width:145px;
+                                        img{
+                                            margin-right:5px;
+                                        }
+                                    }
+                                }
+                                .add-answer-wrap {
+                                    width:82%;
+                                    display:flex;
+                                    align-items:center;
+                                    justify-content:flex-end;
+                                }
+                                .add-answer {
+                                        background-color:transparent;
+                                        color:$btn-bg-color;
+                                        font-size:1.2em;
+                                        border:none;
+                                        display:flex;
+                                        img {
+                                            margin-right:10px;
+                                        }
+                                }
+                        }
+                    }
+                }  //table
+                .save {
+                        display:flex;
+                        align-items:center;
+                        justify-content:flex-end;
+                        button {
+                            // margin-bottom:50px;
+                            width:250px;
+                            height:50px;
+                            background-color:#6161f5;
+                            border-radius:30px;
+                            color: $btn-txt-color;
+                            border:none;
+                        }
+                    }
+
+            } // .question-list LISTA PYTAŃ

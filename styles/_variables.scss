@@ -1,0 +1,49 @@
+@mixin grad(){
+// 	background: -webkit-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #08164b 59%, #061c5a 100%);
+// background: -moz-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #08164b 59%, #061c5a 100%);
+// background: -o-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #08164b 59%, #061c5a 100%);
+// background: -ms-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #08164b 59%, #061c5a 100%);
+// background: linear-gradient(-90deg, #151627 0%, #151627 0%, #0b0d34 34%, #08164b 59%, #061c5a 100%);
+
+
+background: -webkit-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #180e3b 59%, #210e3f 100%);
+background: -moz-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #180e3b 59%, #210e3f 100%);
+background: -o-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #180e3b 59%, #210e3f 100%);
+background: -ms-linear-gradient(180deg, #151627 0%, #151627 0%, #0b0d34 34%, #180e3b 59%, #210e3f 100%);
+background: linear-gradient(-90deg, #151627 0%, #151627 0%, #0b0d34 34%, #180e3b 59%, #210e3f 100%);
+}
+
+$bold-text: #151627;   // in user block USER NAME etc, KAMPANIE > ; Navigation bg col.
+$nav-hover-col:#b1b4e3;  
+$form-names: #3f404b;   // thead th color, basic data -> header Dane podstawowe, Lista pytan, input & textarea
+$table-row-color: #63676d;
+
+$btn-bg-color: #1717f2;
+$btn-bg-color-hover: #0096ff;
+
+$btn-txt-color:#dedede;
+
+$delet-btn-col: #ff426a; // delete btn and logo block ( pink col )
+$delet-btn-col-hover: #ff053a;
+
+$camp-create-btn-bg-col: #6161f5;
+$camp-create-btn-bg-col-hover: #2ea9ff;
+
+$answers-fade-col: #9299a1;  // WYNIKI, SZARY KOLOR
+
+
+$progress-bar-value: #65b6df;
+$progress-bar-procent-col: #494977;
+
+$rating-control-star-size: 65px;
+$rating-control-star-margin: 10px;
+$rating-control-star-width: $rating-control-star-size + $rating-control-star-margin; // width takes into account the size and the margin, as this makes the label wider based on these two values
+$rating-control-star-count : 5;
+     
+
+     
+    // SVG datauris used for the stars to avoid loading flash when interacted with
+$icon-star: '/img/pool/star.png';
+$icon-star--filled: '/img/pool/ystar.png';
+$icon-star--light: '/img/pool/ystar.png';
+     
